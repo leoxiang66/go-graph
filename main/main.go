@@ -13,28 +13,19 @@ func main() {
         {0, 1, 0},
     }
 
-	result := centrality.Article_Rank(matrix,100)
+	
 
     // Print the entire matrix
-    fmt.Println("Matrix:")
+    fmt.Println("Adjacency Matrix:")
     for _, row := range matrix {
         fmt.Println(row)
     }
 
-    fmt.Println("Result:")
+    fmt.Println("\n\nResult of Article Rank:")
+    result := centrality.Article_Rank(matrix,10,0.8)
     for _, row := range result {
         fmt.Println(row)
     }
 
-    // Access specific elements
-    fmt.Println("\nAccessing specific elements:")
-    fmt.Printf("Element at (0, 1): %d\n", matrix[0][1]) // 2
-    fmt.Printf("Element at (2, 2): %d\n", matrix[2][2]) // 9
 
-    // Modify an element
-    matrix[1][1] = 42
-    fmt.Println("\nMatrix after modification:")
-    for _, row := range matrix {
-        fmt.Println(row)
-    }
 }
